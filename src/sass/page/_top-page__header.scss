@@ -1,0 +1,187 @@
+@use "global" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(50);
+    background: transparent;
+    z-index: 1000;
+}
+
+.header__inner {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(22);
+    //一番右の子のため//
+    @include mq('md') {
+        padding-left: rem(32);
+        padding-right: 0;
+    }
+}
+
+.header__logo {
+    color: $white;
+    font-size: rem(20);
+    letter-spacing: rem(1.2);
+    @include mq('md') {
+        font-size: rem(30);
+    }
+}
+
+
+// hamburger //
+
+.hamburger {
+    position: relative;
+    width: rem(24);
+    height: rem(14);
+    @include mq('md') {
+        display: none;
+    }
+}
+
+.hamburger span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background-color: $white;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: rem(7);
+}
+
+.hamburger span:nth-child(3) {
+    top: rem(14);
+}
+
+// クリックされて”is-active”が付与された時の指定//
+.hamburger.is-active span:nth-child(1) {
+    top: rem(7);
+    transition: 0.1s transform 0.1s, background-color;
+    transform: rotate(-45deg);
+    background-color: $white;
+}
+
+.hamburger.is-active span:nth-child(2) {
+    transition: 0.1s opacity;
+    opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+    top: rem(7);
+    transition: 0.1s transform 0.1s, background-color;
+    transform: rotate(45deg);
+    background-color: $white;
+}
+
+// header-nav //
+
+.header-nav {
+    display: none;
+    height: inherit;
+    @include mq('md') {
+        display: block;
+    }
+}
+
+.header-nav__inner {
+    height: inherit;
+}
+
+.header-nav__items {
+    height: inherit;
+    display: flex;
+}
+
+.header-nav__item {
+    height: inherit;
+    padding: 0 rem(16);
+}
+
+.header-nav__item a {
+    height: inherit;
+    display: grid;
+    place-items: center;
+    font-size: rem(16);
+    letter-spacing: rem(2);
+    line-height : calc(35 / 16);
+    font-family: $main-font;
+    font-weight: $regular;
+    color: $white;
+}
+
+//一番右の子用//
+.header-nav__item.header-nav__item--white {
+    padding: 0;
+    margin-left: rem(16);
+}
+
+.header-nav__item.header-nav__item--white a {
+    background-color: $white;
+    padding: 0 rem(32);
+    color: $black;
+}
+
+// クリックされたときに画面いっぱいにbgcを広げる //
+.drawer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    width: 100%;
+    height: 100vh;
+    @include mq('md') {
+        display: none;
+    }
+}
+
+//　インナーで全体を中央に配置する　//
+.drawer__inner {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+// 縦に並べて中央配置 //
+.drawer__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+//　　上下方向にmarginをつけるためにインラインブロックにする　　//
+.drawer__item {
+		display: inline-block;
+}
+
+.drawer__item:not(:first-child) {
+    margin-top: 25px;
+}
+
+//リンクの内容を指定（余白を付与したり、下線をつけたりetc..）//
+.drawer__link {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    font-size: rem(16);
+    color: $white;
+    padding-bottom: 25px;
+    letter-spacing: 0.05em;
+}
+
+

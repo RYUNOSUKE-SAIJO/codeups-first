@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.card {
+    max-width: rem(335);
+    width: 100%;
+    @include mq('md') {
+        max-width: rem(350);
+    }
+}
+
+.card__inner {
+
+}
+
+.card__img {
+
+}
+
+.card__img img {
+    max-width: rem(335);
+    width: 100%;
+    @include mq('md') {
+        max-width: rem(350);
+    }
+}
+
+.card__body {
+    background-color: $white;
+    padding: rem(4) rem(22) rem(16);
+    @include mq('md') {
+        padding: rem(4) rem(24) rem(16);
+
+    }
+}
+
+.card__title {
+
+}
+
+.card__title h3 {
+    font-size: rem(18);
+    color: $black;
+    letter-spacing: rem(1);
+    line-height : calc(35 / 18);
+    font-family: $main-font;
+    font-weight: $regular;
+}
+
+.card__text {
+    margin-top: rem(4);
+    @include mq('md') {
+        margin-top: rem(6);
+    }
+}
+
+.card__text p {
+    font-size: rem(14);
+    color: $black;
+    letter-spacing: rem(1);
+    line-height : calc(26 / 14);
+    font-family: $main-font;
+    font-weight: $regular;
+}
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    margin-top: rem(8);
+}
+
+.card__tag {
+    padding: rem(1) rem(5);
+    background-color: $yellow;
+}
+
+.card__tag p {
+    font-size: rem(14);
+    color: $black;
+    letter-spacing: rem(1);
+    line-height : calc(26 / 16);
+    font-family: $main-font;
+    font-weight: $regular;
+}
+
+.card__date {
+    margin-left: auto;
+    font-size: rem(14);
+    color: $black;
+    letter-spacing: rem(1);
+    line-height : calc(26 / 16);
+    font-family: $main-font;
+    font-weight: $regular;
+}
+

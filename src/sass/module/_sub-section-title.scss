@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.sub-section-title {
+    font-size: rem(50);
+    color: $yellow;
+    letter-spacing: rem(2);
+    font-family: $second-font;
+    font-weight: $regular;
+    opacity: 0.2;
+    @include mq('md') {
+        font-size: rem(110);
+    }
+}

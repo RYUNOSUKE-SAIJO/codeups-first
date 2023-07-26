@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.btn {
+    max-width: rem(360);
+    width: 100%;
+    display: inline-block;
+    background-color: #333333;
+    padding: rem(9) 0;
+    border: solid rem(1) $white;
+    text-align: center;
+    @include mq('md') {
+        padding: rem(14);
+    }
+}
+
+.btn p {
+    font-size: rem(20);
+    color: $white;
+    letter-spacing: rem(2);
+    font-family: $main-font;
+    font-weight: $regular;
+}
