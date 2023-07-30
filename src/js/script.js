@@ -32,12 +32,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           autoplay: { //自動再生
                   delay: 3000,  //切り替わる速度
               },
-          breakpoints: {
-              769: { //７６９px以上で...
-                autoplay: false, //自動再生を停止
-                clickable: true,　//クリック動作
-              },
-            },
+
       });
 
 });

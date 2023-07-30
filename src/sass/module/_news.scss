@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .news {
-
+    margin-top: rem(24);
+    padding: $padding-sp;
 }
 
 .news__inner {
@@ -14,9 +15,6 @@
 .news__header {
     display: flex;
     align-items: center;
-    @include mq('md') {
-
-    }
 }
 
 .news__date {
@@ -74,7 +72,7 @@
 }
 
 .news__btn.btn p {
-    color: $black;
+    color: $white;
     line-height: 1;
 }
 

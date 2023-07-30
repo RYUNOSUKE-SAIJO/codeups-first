@@ -29,6 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
+
 <body>
   <header class="header">
     <div class="header__inner">
@@ -40,42 +41,58 @@
       </div>
       <div class="header-nav js-header-nav">
         <div class="header-nav__inner">
-            <ul class="header-nav__items">
-              <li class="header-nav__item"><a href="#トップ">トップ</a></li>
-              <li class="header-nav__item"><a href="#お知らせ">お知らせ</a></li>
-              <li class="header-nav__item"><a href="#事業内容">事業内容</a></li>
-              <li class="header-nav__item"><a href="#制作実績">制作実績</a></li>
-              <li class="header-nav__item"><a href="#企業概要">企業概要</a></li>
-              <li class="header-nav__item"><a href="#ブログ">ブログ</a></li>
-              <li class="header-nav__item header-nav__item--white"><a href="#お問い合わせ">お問い合わせ</a></li>
-            </ul>
+          <ul class="header-nav__items">
+            <li class="header-nav__item"><a href="#トップ">トップ</a></li>
+            <li class="header-nav__item"><a href="#お知らせ">お知らせ</a></li>
+            <li class="header-nav__item"><a href="#事業内容">事業内容</a></li>
+            <li class="header-nav__item"><a href="#制作実績">制作実績</a></li>
+            <li class="header-nav__item"><a href="#企業概要">企業概要</a></li>
+            <li class="header-nav__item"><a href="#ブログ">ブログ</a></li>
+            <li class="header-nav__item header-nav__item--white"><a href="#お問い合わせ">お問い合わせ</a></li>
+          </ul>
         </div>
       </div>
     </div>
-
-
-    <div class="drawer js-drawer">
-      <div class="drawer__inner">
-          <ul class="drawer__items">
-            <li class="drawer__item"><a href="#トップ" class="drawer__link">トップ</a></li>
-            <li class="drawer__item"><a href="#お知らせ" class="drawer__link">お知らせ</a></li>
-            <li class="drawer__item"><a href="#事業内容" class="drawer__link">事業内容</a></li>
-            <li class="drawer__item"><a href="#制作実績" class="drawer__link">制作実績</a></li>
-            <li class="drawer__item"><a href="#企業概要" class="drawer__link">企業概要</a></li>
-            <li class="drawer__item"><a href="#ブログ" class="drawer__link">ブログ</a></li>
-            <li class="drawer__item"><a href="#お問い合わせ" class="drawer__link">お問い合わせ</a></li>
-          </ul>
-      </div>
-    </div>
   </header>
+
+  <div class="drawer js-drawer">
+    <div class="drawer__inner">
+      <ul class="drawer__items">
+        <li class="drawer__item"><a href="#トップ" class="drawer__link">トップ</a></li>
+        <li class="drawer__item"><a href="#お知らせ" class="drawer__link">お知らせ</a></li>
+        <li class="drawer__item"><a href="#事業内容" class="drawer__link">事業内容</a></li>
+        <li class="drawer__item"><a href="#制作実績" class="drawer__link">制作実績</a></li>
+        <li class="drawer__item"><a href="#企業概要" class="drawer__link">企業概要</a></li>
+        <li class="drawer__item"><a href="#ブログ" class="drawer__link">ブログ</a></li>
+        <li class="drawer__item"><a href="#お問い合わせ" class="drawer__link">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+
   <main>
+
     <section class="mv">
       <div class="mv__inner">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/assets/images/common/MVスライダー画像.jpg" alt="ビル"></div>
-            <div class="swiper-slide"><img src="/assets/images/common/MVスライダー画像２.jpg" alt="ビル"></div>
-            <div class="swiper-slide"><img src="/assets/images/common/MVスライダー画像３.jpg" alt="ビル"></div>
+            <div class="swiper-slide">
+              <picture class="mv__img">
+                <source srcset="/assets/images/common/MVスライダー画像.jpg" media="(max-width: 768px)">
+                <img src="/assets/images/common/MV-pc１.jpg" alt="ビル群">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="mv__img">
+                <source srcset="/assets/images/common/MVスライダー画像２.jpg" media="(max-width: 768px)">
+                <img src="/assets/images/common/MV-pc２.jpg" alt="ビル群">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="mv__img">
+                <source srcset="/assets/images/common/MVスライダー画像３.jpg" media="(max-width: 768px)">
+                <img src="/assets/images/common/MV-pc３.jpg" alt="ビル群">
+              </picture>
+            </div>
           </div>
           <div class="mv__title-wrap">
             <p class="mv__main-title">メインタイトルが入ります</p>
@@ -84,6 +101,58 @@
         </div>
       </div>
     </section>
+
+    <section class="news">
+      <div class="news__inner">
+        <div class="news__header">
+          <time class="news__date" datetime="2020-07-20">2020.07.20</time>
+          <div class="news__tag">
+            <p>お知らせ</p>
+          </div>
+        </div>
+        <div class="news__body">
+          <p class="news__text">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</p>
+        </div>
+        <a href="#" class="news__btn btn">
+          <p>すべて見る</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="section-title">
+        <h2 class="section-title__main">事業内容</h2>
+        <p class="section-title__sub">Content</p>
+      </div>
+      <div class="content__container">
+        <div class="content__container-items">
+          <div class="content__container-item">
+            <div class="container-item_text">
+              <p>経営理念ページへ</p>
+            </div>
+          </div>
+          <div class="content__container-item">
+            <div class="container-item_text">
+              <p>理念１へ</p>
+            </div>
+          </div>
+          <div class="content__container-item">
+            <div class="container-item_text">
+              <p>理念２へ</p>
+            </div>
+          </div>
+          <div class="content__container-item">
+            <div class="container-item_text">
+              <p>理念３へ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
 
 
 
