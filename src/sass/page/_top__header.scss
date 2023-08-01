@@ -120,6 +120,29 @@
     font-weight: $regular;
     color: $white;
 }
+.header-nav__item a {
+    position: relative;
+}
+
+.header-nav__item a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(2);
+    background: #FFEA2E;
+    bottom: rem(8);
+    visibility: hidden; 
+    opacity: 0;
+}
+
+.header-nav__item a:hover:after {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+
 
 //一番右の子用//
 .header-nav__item.header-nav__item--white {
@@ -185,4 +208,8 @@
     letter-spacing: 0.05em;
 }
 
+//スクロール時にheaderに背景色を追加//
+.header--scrolled {
+    background: $black;
+}
 

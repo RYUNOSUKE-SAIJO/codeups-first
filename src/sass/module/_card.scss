@@ -8,14 +8,6 @@
     }
 }
 
-.card__inner {
-
-}
-
-.card__img {
-
-}
-
 .card__img img {
     max-width: rem(335);
     width: 100%;
@@ -29,13 +21,31 @@
     padding: rem(4) rem(22) rem(16);
     @include mq('md') {
         padding: rem(4) rem(24) rem(16);
-
     }
 }
 
-.card__title {
-
+.card__body.card-animation {
+    background:linear-gradient(to right,$gray,$gray 33%,$white 66%,White) 100% 0 / 300% 100%;
+    transition:background-position 0.3s;
 }
+
+.card__body.card-animation:hover {
+    background-position:0 0;
+}
+
+.card__body.card-animation:hover .card__title h3 {
+    color: $white;
+}
+
+.card__body.card-animation:hover .card__text p {
+    color: $white;
+}
+
+.card__body.card-animation:hover .card__date {
+    color: $white;
+}
+
+
 
 .card__title h3 {
     font-size: rem(18);
