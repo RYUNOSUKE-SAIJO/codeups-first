@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.contact {
+    margin-top: rem(120);
+    background-color: $gray;
+    padding: rem(64) rem(20);
+    @include mq('md') {
+        margin-top: rem(150);
+        padding: rem(100) rem(90) rem(150);
+    }
+}
+
+.contact__inner {
+    margin-top: rem(20);
+    @include mq('md') {
+        margin-top: rem(24);
+    }
+}
+
+.contact__body p {
+    font-size: rem(16);
+    color: $white;
+    letter-spacing: rem(2);
+    font-family: $main-font;
+    font-weight: $regular;
+    @include mq('md') {
+        text-align: center;
+    }
+}
+
+.contact__footer {
+    margin-top: rem(40);
+    @include mq('md') {
+        margin-top: rem(60);
+    }
+}
+
+.contact__btn.btn{
+    display: block;
+    margin: 0 auto;
+}
+

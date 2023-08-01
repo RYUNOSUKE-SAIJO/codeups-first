@@ -24,7 +24,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
     });
 
-    const swiper = new Swiper('.swiper', {
+
+    const slide1 = new Swiper('.slide1', {
+        // Optional parameters
+          loop: true,
+          effect: "fade", //フワッと
+          speed: 3000,
+          autoplay: { //自動再生
+                  delay: 3000,  //切り替わる速度
+              },
+      });
+
+    const slide2 = new Swiper('.slide2', {
         // Optional parameters
           loop: true,
           effect: "fade", //フワッと
@@ -33,6 +44,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                   delay: 3000,  //切り替わる速度
               },
 
+            pagination: {
+            el: '.swiper-pagination', //ページネーション要素
+            type: 'bullets', //ページネーションの種類
+            clickable: true, //クリックに反応させる
+            },
+      
       });
 
-});
+});//end

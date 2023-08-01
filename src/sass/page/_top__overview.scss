@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.overview {
+    margin-top: rem(72);
+    @include mq('md') {
+        margin-top: rem(150);
+    }
+}
+
+.works__inner.reverse {
+    @include mq('md') {
+        flex-direction: row-reverse;
+        background: linear-gradient(to right, $gray 70%, $black 30%, $black 70%,);
+
+    }
+}

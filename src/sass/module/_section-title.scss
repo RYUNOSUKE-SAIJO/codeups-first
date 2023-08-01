@@ -1,29 +1,64 @@
 @use "global" as *;
 
 .section-title {
-    
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.section-title.title-left {
+    @include mq('md') {
+        display: flex;
+        padding: 0 rem(20);
+        justify-content: start;
+    }
+}
+
+.section-title.title-right {
+    @include mq('md') {
+        display: flex;
+        padding: 0 rem(20);
+        justify-content: end;
+    }
 }
 
 .section-title__main {
+    z-index: 1;
+}
+
+.section-title__main h2{
+    font-size: rem(50);
+    color: $yellow;
+    letter-spacing: rem(2);
+    line-height: 1;
+    font-family: $second-font;
+    font-weight: $regular;
+    opacity: 0.2;
+    @include mq('md') {
+        font-size: rem(110); 
+    }
+}
+
+.section-title__sub {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    @include mq('md') {
+        top: 50%;
+    }
+}
+
+.section-title__sub p{
     font-size: rem(20);
     color: $white;
     letter-spacing: rem(2);
+    line-height: 1;
     font-family: $main-font;
     font-weight: $regular;
     @include mq('md') {
         font-size: rem(30);
         letter-spacing: rem(0.5);
-    }
-}
-
-.section-title__sub {
-    font-size: rem(50);
-    color: $yellow;
-    letter-spacing: rem(2);
-    font-family: $second-font;
-    font-weight: $regular;
-    opacity: 0.2;
-    @include mq('md') {
-        font-size: rem(110);
     }
 }
