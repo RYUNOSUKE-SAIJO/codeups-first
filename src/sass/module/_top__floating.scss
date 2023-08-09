@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.floating {
+	position: fixed;
+	right: 8px;
+	bottom: 8px;
+	display: none;
+}
+.floating a {
+	display: block;
+	color: $black;
+	background: $white;
+	padding: 8px;
+	text-decoration: none;
+	opacity: 0.6;
+}
+.floating a:hover {
+	opacity: 1;
+    color: $white;
+    background: $gray;
+    transition: 0.5s;
+}

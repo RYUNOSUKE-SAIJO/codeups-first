@@ -24,32 +24,61 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
     });
 
+    // ヘッダー高さ分だけコンテンツを下げる
+    $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+        var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+        var pos = $(elmHash).offset().top-80;//idの上部の距離からHeaderの高さを引いた値を取得
+        $('body,html').animate({scrollTop: pos}, 200); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+        return false;
+    });
 
-    const slide1 = new Swiper('.slide1', {
-        // Optional parameters
-          loop: true,
-          effect: "fade", //フワッと
-          speed: 3000,
-          autoplay: { //自動再生
-                  delay: 3000,  //切り替わる速度
-              },
-      });
 
-    const slide2 = new Swiper('.slide2', {
-        // Optional parameters
-          loop: true,
-          effect: "fade", //フワッと
-          speed: 3000,
-          autoplay: { //自動再生
-                  delay: 3000,  //切り替わる速度
-              },
+    // swiper //
+    const slide1 = new Swiper(".slide1", {
+        loop: true,
+        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        effect: "fade", // フェード切り替え
+        speed: 2000, // 2秒かけてフェード
+    });
 
-            pagination: {
-            el: '.swiper-pagination', //ページネーション要素
-            type: 'bullets', //ページネーションの種類
-            clickable: true, //クリックに反応させる
-            },
-      
-      });
+    const slide2 = new Swiper(".slide2", {
+        loop: true,
+        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        effect: "fade", // フェード切り替え
+        speed: 2000, // 2秒かけてフェード
+        // ページネーション
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+
+    const slide3 = new Swiper(".slide3", {
+        loop: true,
+        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        effect: "fade", // フェード切り替え
+        speed: 2000, // 2秒かけてフェード
+        // ページネーション
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+
+
+    jQuery(window).on("scroll", function($) {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.floating').show();
+        } else {
+            jQuery('.floating').hide();
+        }
+    });
+    
+    jQuery('.floating').click(function () {
+        jQuery('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
 
 });//end

@@ -1,7 +1,22 @@
 @use "global" as *;
 
 .content {
+    position: relative;
     margin-top: rem(100);
+}
+
+.content::before {
+    position: absolute;
+    content: "";
+    top: rem(-64);
+    left: 0;
+    width: 94.6875%;
+    height: rem(1212);
+    //background-color: $yellow;
+    background-image: 
+    linear-gradient(to right top, transparent 49.9%, $yellow 50.1%, $yellow calc(49.9% + rem(2)), transparent calc(50.1% + rem(2)));
+    opacity: 0.2;
+    z-index: -1;
 }
 
 .section-title.title-left {

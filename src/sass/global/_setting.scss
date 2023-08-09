@@ -38,3 +38,12 @@ body {
   background: $black;
   font-family: $main-font
 }
+
+////////////////////
+// mainの指定
+////////////////////
+
+main {
+  max-width: rem(1900);
+  width: 100%;
+}

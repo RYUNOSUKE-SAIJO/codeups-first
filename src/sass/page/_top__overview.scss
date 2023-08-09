@@ -1,16 +1,35 @@
 @use "global" as *;
 
 .overview {
+    position: relative;
     margin-top: rem(72);
     @include mq('md') {
         margin-top: rem(150);
     }
 }
 
+.overview::before {
+    position: absolute;
+    content: "";
+    top: rem(-150);
+    left: 0;
+    width: 94.6875%;
+    height: rem(1212);
+    //background-color: $yellow;
+    background-image: 
+    linear-gradient(to left top, transparent 49.9%, $yellow 50.1%, $yellow calc(49.9% + rem(2)), transparent calc(50.1% + rem(2)));
+    opacity: 0.2;
+    z-index: -1;
+}
+
 .works__inner.reverse {
     @include mq('md') {
         flex-direction: row-reverse;
-        background: linear-gradient(to right, $gray 70%, $black 30%, $black 70%,);
+        background: linear-gradient(to right, $gray 70%, transparent 30%, transparent 70%,);
 
     }
+}
+
+.swiper.slide3 {
+    padding-bottom: rem(50);
 }

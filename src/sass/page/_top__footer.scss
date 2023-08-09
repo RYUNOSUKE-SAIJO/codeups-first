@@ -47,7 +47,29 @@
 
 .footer-nav__item a {
     color: $white;
+    position: relative;
 }
+
+.footer-nav__item a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(2);
+    background: #FFEA2E;
+    bottom: rem(-3);
+    visibility: hidden; 
+    opacity: 0;
+}
+
+.footer-nav__item a:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+
+
 
 .footer__copy-right {
     text-align: center;

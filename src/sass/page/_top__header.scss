@@ -146,13 +146,12 @@
 
 //一番右の子用//
 .header-nav__item.header-nav__item--white {
-    padding: 0;
     margin-left: rem(16);
+    padding: 0 rem(32);
+    background-color: $white;
 }
 
 .header-nav__item.header-nav__item--white a {
-    background-color: $white;
-    padding: 0 rem(32);
     color: $black;
 }
 

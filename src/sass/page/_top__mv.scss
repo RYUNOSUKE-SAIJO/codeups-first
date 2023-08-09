@@ -13,27 +13,28 @@
 
 .swiper {
     height: inherit;
+    width: inherit;
 }
 
 .swiper-wrapper {
     height: inherit;
+    width: inherit;
+
 }
 
 .swiper-slide {
     height: inherit;
+    width: inherit;
+
 }
 
-.swiper-slide {
+.slide-img {
     height: inherit;
+    width: inherit;
 }
 
-.mv__img {
+.slide-img img {
     height: inherit;
-}
-
-.mv__img img {
-    height: inherit;
-    object-fit: cover;
 }
 
 .mv__title-wrap {
@@ -63,4 +64,29 @@
     font-family: $main-font;
     font-weight: $bold;
 }
+
+
+.slide-img {
+    display: inline-block;
+}
+
+@keyframes zoomUp {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(1.15);
+    }
+}
+
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+    animation: zoomUp 7s linear 0s normal both;
+}
+
+
+
+
 
