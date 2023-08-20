@@ -13,7 +13,7 @@
     width: 94.6875%;
     height: rem(1212);
     //background-color: $yellow;
-    background-image: 
+    background-image:
     linear-gradient(to right top, transparent 49.9%, $yellow 50.1%, $yellow calc(49.9% + rem(2)), transparent calc(50.1% + rem(2)));
     opacity: 0.2;
     z-index: -1;
@@ -69,16 +69,16 @@
 
 
 .content__container-item.content-item_0 {
-    background: url(/assets/images/common/経営理念ページ.jpg) no-repeat center center / cover;
+    background: url(../../assets/images/common/keiei-rinen.jpg) no-repeat center center / cover;
 }
 .content__container-item.content-item_1 {
-    background: url(/assets/images/common/理念１.jpg) no-repeat center center / cover;
+    background: url(../../assets/images/common/rinenn-1.jpg) no-repeat center center / cover;
 }
 .content__container-item.content-item_2 {
-    background: url(/assets/images/common/理念２.jpg) no-repeat center center / cover;
+    background: url(../../assets/images/common/rinenn-2.jpg) no-repeat center center / cover;
 }
 .content__container-item.content-item_3 {
-    background: url(/assets/images/common/理念３.jpg) no-repeat center center / cover;
+    background: url(../../assets/images/common/rinenn-3.jpg) no-repeat center center / cover;
 }
 
 .container-item_text {

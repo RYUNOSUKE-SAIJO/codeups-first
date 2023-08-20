@@ -1,6 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-    
+
     //ハンバーガー//
     $(".js-hamburger,.js-drawer, .js-drawer a").click(function () {
         $(".js-hamburger").toggleClass("is-active");
@@ -36,14 +36,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // swiper //
     const slide1 = new Swiper(".slide1", {
         loop: true,
-        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        autoplay: { delay: 4000, disableOnInteraction: false, },
         effect: "fade", // フェード切り替え
         speed: 2000, // 2秒かけてフェード
     });
 
     const slide2 = new Swiper(".slide2", {
         loop: true,
-        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        autoplay: { delay: 4000, disableOnInteraction: false, },
         effect: "fade", // フェード切り替え
         speed: 2000, // 2秒かけてフェード
         // ページネーション
@@ -55,7 +55,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     const slide3 = new Swiper(".slide3", {
         loop: true,
-        //autoplay: { delay: 4000, disableOnInteraction: false, },
+        autoplay: { delay: 4000, disableOnInteraction: false, },
         effect: "fade", // フェード切り替え
         speed: 2000, // 2秒かけてフェード
         // ページネーション
